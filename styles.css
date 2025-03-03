@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+}
+
+.container {
+    text-align: center;
+}
+
+.player-selection {
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.cell.clicked {
+    transform: scale(1.1);
+}
+
+.status {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.reset-button, .theme-toggle {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover, .theme-toggle:hover {
+    background-color: #45a049;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fff }
+
+.dark-mode .cell {
+    background-color: #444;
+    border: 2px solid #fff;
+}
+
+.dark-mode .cell:hover {
+    background-color: #555;
+}
+
+.dark-mode .reset-button, .dark-mode .theme-toggle {
+    background-color: #555;
+}
+
+.dark-mode .reset-button:hover, .dark-mode .theme-toggle:hover {
+    background-color: #666;
+}
